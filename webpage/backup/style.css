@@ -1,0 +1,53 @@
+.button {
+    background-color: #A328AC;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 6px;
+    border-radius: 25px;
+}
+
+.button-div {
+    margin-top: 150px;
+}
+
+.input-handle {
+    color: #6F6F6F;
+    width: 100%;
+    font-size: 27px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.formStuff {
+    margin-top: 42px;
+}
+
+.modal-lg {
+    max-width: 80%;
+}
+
+@media only screen and (min-width: 1440px) {
+    .modal-lg {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .modal-lg {
+        max-width: 100%;
+    }
+}
+
+/* @media only screen and (min-width: 1024px) {
+    .modal-lg {
+        max-width: 80%;
+    }
+} */
+

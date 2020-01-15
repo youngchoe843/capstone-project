@@ -1,0 +1,115 @@
+/*------------------------------------------------------------------
+[Stylesheet]
+Color Scheme - Dark
+-------------------------------------------------------------------*/
+
+.hero_fullscreen,
+nav a,
+.subsection,
+#message,
+.cta_button_area a {
+	color:white;
+}
+
+.hero_fullscreen,
+.preloader_header,
+.nivo-lightbox-theme-default.nivo-lightbox-overlay  {
+	background-color: #212121;	
+}
+
+.preloader_header .preloader_loader svg path.preloader_loader_circlebg {
+    stroke: rgba(255, 255, 255, .1);
+}
+
+.preloader_header .preloader_loader svg path.preloader_loader_circle {
+    transition: stroke-dashoffset 0.2s;
+    stroke: rgba(255, 255, 255, .95);
+}
+
+.contact_form .input-field label,
+.menu_bar_navigation ul li a{
+	color:white;
+}
+
+.input-field label {
+	color:white;
+}
+
+.contact_form input[type=text],
+.contact_form input[type=password],
+.contact_form input[type=email],
+.contact_form input[type=date],
+.contact_form textarea {
+	border-bottom: 1px solid rgba(255, 255, 255, .7);
+}
+
+.menu_bar {
+	background-color:#424242;
+}
+
+.logo_dark {
+	display:none;
+}
+
+.logo_light {
+	display:block;
+}
+
+.iconbox_icon {
+    color: rgba(255,255,255,1);
+}
+
+.iconbox_icon.icon_rounded,
+.pricing_box {
+    border: solid 1px rgba(255,255,255,0.1);
+}
+
+.pricing_box_price {
+	border-top: solid 1px rgba(255,255,255,0.1);
+	border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.feature_box {
+	border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+.nivo-lightbox-theme-default .nivo-lightbox-close,
+.nivo-lightbox-theme-default .nivo-lightbox-nav {
+	color:white
+}
+
+#reviews .owl-theme .owl-controls .owl-page span {border-color:white !important; background: rgba(255,255,255,0)}
+#reviews .owl-theme .owl-controls .owl-page.active span,
+#reviews .owl-theme .owl-controls.clickable .owl-page:hover span {
+	background: rgba(255,255,255,1);
+	border-color:white !important
+}
+
+.background_color1 {
+	background: #212121;
+}
+
+.background_color2 {
+	background: #262626;
+}
+
+.review_top_ornament_line {border-top:solid 1px rgba(255,255,255,.1)}
+.review_top_ornament_quotemark {color:rgba(255,255,255,.1)}
+.review_bottom_ornament_line {border-top:solid 1px rgba(255,255,255,.1)}
+.review_bottom_ornament_triangle {
+	border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(255,255,255,.1);
+}
+#reviews.background_color1 .review_bottom_ornament_triangle:after {
+	border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #212121; 
+}
+
+#reviews.background_color2 .review_bottom_ornament_triangle:after {
+	border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #262626; 
+}

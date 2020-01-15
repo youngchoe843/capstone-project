@@ -1,2 +1,1 @@
-# capstone_project
-capstone
+# w210-russian-bots

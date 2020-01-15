@@ -1,0 +1,10 @@
+
+Change directory
+D: # change to drive D
+cd Dropbox\Education\Bekerley Data Science\Fall 2017\w209 Data Visualization\w209-hw
+
+python path + server spin up:
+c:\users\pdoan\AppData\Local\Continuum\Anaconda3\python.exe -m http.server
+
+To access 
+http://people.ischool.berkeley.edu/~phatdoan/

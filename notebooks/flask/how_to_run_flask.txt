@@ -1,0 +1,22 @@
+This script will run the flask script which contains the model as a pickled file.  This flask script (bot_classifier_w_flask.py) will keep running in the background listening at port '5000' until it gets a query from some script (query_flask.py) that is giving a twitter filehandle to that port.  The script for now is just using Kasey's bot classifier - I will later add vyas' classifier.
+
+Go to directory where you will install stuff
+mkdir flask_demo
+cd flask_demo
+
+# installing virtualenv; I run flask in a virtual environment.  The next 3 lines will create and get you inside a virtualenv
+sudo easy_install virtualenv
+virtualenv flask_demo_environment --python=/usr/bin/python2.7
+source flask_demo_environment/bin/activate
+pip install twitter flask gunicorn pandas sklearn scipy xgboost requests
+
+git clone https://github.com/phattdoan/w210-russian-bots.git
+cd w210-russian-bots/notebooks/
+
+# this will cause the port 5000 to 'listen' for queries to it.  Running in background…
+# the script is called bot_classifier_w_flask.py
+gunicorn --bind 0.0.0.0:5000 bot_classifier_w_flask:app &
+
+# now query the port for twitter handle kaseyng53.  this will return a small subset of json information.  Can you use it ?
+python query_flask.py kaseyng53
+

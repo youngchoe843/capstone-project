@@ -1,0 +1,75 @@
+{
+    "twitter_data": {
+        "id": 25073877,
+        "id_str": "25073877",
+        "name": "Donald J. Trump",
+        "screen_name": "realDonaldTrump",
+        "location": "Washington, DC",
+        "profile_location": null,
+        "description": "45th President of the United States of America\ud83c\uddfa\ud83c\uddf8",
+        "url": "https://t.co/OMxB0x7xC5",
+        "protected": false,
+        "followers_count": 48760924,
+        "friends_count": 45,
+        "listed_count": 84595,
+        "created_at": "Wed Mar 18 13:46:38 +0000 2009",
+        "favourites_count": 24,
+        "utc_offset": -18000,
+        "time_zone": "Eastern Time (US & Canada)",
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 37087,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": true,
+        "profile_background_image_url": "http://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_normal.jpg",
+        "profile_image_url": "http://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_normal.jpgg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/25073877/1521874230/mobile",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "stat":{
+    	"tweets_last_week": 3500,
+    	"tweets_retweets_ratio": 1.5
+
+    },
+    "bot_profile": {
+    	"score": 0.2,
+        "Friends/Followers": 0.65,
+        "Network": 0.95,
+        "Setting": 0.1,
+        "Activities": 0.8
+    },
+    "political_profile": {
+    	"score": 0.8,
+        "political_content": 0.1,
+        "sentiment": 0.45,
+        "tone": 0.1,
+        "stance": 0.65
+    },
+    "common_topic": [
+        [
+            "faked news",
+            150
+        ],
+        [
+            "gun control",
+            50
+        ],
+        [
+            "tariff",
+            200
+        ],
+        [
+            "witch hunt",
+            250
+        ]
+    ]
+}

@@ -1,0 +1,89 @@
+/*------------------------------------------------------------------
+[Stylesheet]
+Color Palette - Amber
+
+name           |  normal   |  hover 
+
+Red            - #e53935    #f44336
+Pink           - #d81b60    #e91e63
+Purple         - #8e24aa    #9c27b0
+Deep Purple    - #5e35b1    #673ab7
+Indigo         - #3949ab    #3f51b5
+Blue           - #1e88e5    #2196f3
+Light Blue     - #039be5    #03a9f4
+Cyan           - #00acc1    #00bcd4
+Teal           - #00897b    #009688
+Green          - #43a047    #4caf50
+Light Green    - #7cb342    #8bc34a    
+Lime           - #c0ca33    #cddc39
+Yellow         - #ffd600    #ffea00 
+Amber          - #ffb300    #ffc107
+Orange         - #fb8c00    #ff9800
+Brown          - #6d4c41    #795548
+Gray           - #757575    #9e9e9e
+Blue-gray      - #546e7a    #607d8b
+
+-------------------------------------------------------------------*/
+
+.btn,
+.btn-large {
+	background-color: #e53935;
+}
+
+.btn:hover,
+.btn-large:hover {
+	background-color: #f44336;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=date]:focus,
+textarea:focus {
+	border-bottom: 1px solid #e53935;
+    -webkit-box-shadow: 0 1px 0 0 #e53935;
+    -moz-box-shadow: 0 1px 0 0 #e53935;
+    box-shadow: 0 1px 0 0 #e53935; 
+}
+
+.hero_fullscreen.gradient_overlay {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #E65100), color-stop(1, #FFEB3B));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top left, #E65100 0%, #FFEB3B 100%);
+}
+
+.hero_fullscreen.background_solid.solid_01 {
+	background: url(../../images/home_backgrounds/home_bg_01_amber.jpg);
+	background-position:50% 99.9%;
+	background-size: 100% auto;	
+}
+
+.hero_fullscreen.background_solid.solid_02 {
+	background: url(../../images/home_backgrounds/home_bg_02_amber.jpg);
+	background-position:50% 99.9%;
+	background-size: 100% auto;	
+}
+
+a, .menu_bar_navigation ul li a:hover, .menu_bar_navigation ul li.active a, .cbp-spmenu a:hover{
+	color:#ffb300
+}
+
+.background_color3 {
+	background: #ffb300;
+	color:white;	
+}
+
+.pricing_box.pricing_box_featured {
+	border: solid 2px #ffb300;
+}

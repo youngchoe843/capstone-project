@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Bot Detection</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	
+	
+	<!-- Included Google Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900,300italic,400italic,700italic,900italic" rel='stylesheet' type='text/css'>
+	
+	
+	<!-- CSS Files comes here -->
+	<link href="css/grid12.css" rel="stylesheet" media="screen">                              	 <!-- Grid System -->
+
+	<link href="css/james_typography.css" rel="stylesheet" media="screen">                       <!-- James Framework - TYPOGRAPHY -->
+
+	<link href="css/main.css" rel="stylesheet" media="screen">                                   <!-- Main CSS file -->
+
+    <link href="css/color_scheme_light.css" rel="stylesheet" media="screen">                      <!-- Color scheme (dark/light)-->
+
+	<link href="css/colors/color_palette_blue.css" rel="stylesheet" media="screen">              <!-- Color palette -->
+
+	<link href="css/rapid-icons.css" rel="stylesheet" media="screen">                            <!-- James Framework - ICONS -->
+
+	<link href="css/js_styles/jquery.maximage.min.css" rel="stylesheet" media="screen">          <!-- MaxImage background image slideshow -->
+
+	<link href="css/responsivity.css" rel="stylesheet" media="screen">                           <!-- Responsive Fixes -->
+	<link href="css/animate.css" rel="stylesheet" media="screen">                                <!-- Animate - animations -->
+
+    <!-- <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+	<!-- Modernizer and IE specyfic files -->  
+	<script src="js/modernizr.custom.js"></script>	
+
+
+	<!--[if IE 9]>
+    	<link href="css/ie.css" rel="stylesheet" media="screen">
+    <![endif]--> 	
+	   
+  </head>
+  
+  <body>
+
+	<div id="preloader_container">
+	    
+	    <!-- Preloader Screen -->
+		<header class="preloader_header">	 
+	        <div class="preloader_loader">
+	            <svg class="preloader_inner" width="60px" height="60px" viewBox="0 0 80 80">
+	                <path class="preloader_loader_circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	                <path id="preloader_loader_circle" class="preloader_loader_circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+	            </svg>
+	        </div>
+	    </header>
+	    <!-- //Preloader Screen -->
+	
+
+
+
+		<!-- Fullscreen homepage -->
+		<!-- <section class="hero_fullscreen background_slider subsection background_color1" > -->
+		<section  class="hero_fullscreen background_slider subsection background_color1" >
+		</section>
+		<!-- Main content -->
+	  	<div class="container">
+	  		<div>
+	  		</div>
+        	<div class="formStuff">
+            <!-- <form action="dataVis.html" method="GET"> -->
+                <input type="text" name="twitterHandle" id="twitterHandleInput" value="" class="input-handle" placeholder="Enter a Twitter handle @realDonaldTrump">
+                <div class="text-center button-div">
+                    <!-- <button type="submit" class="button">CHECK</button> -->
+                    <div class="message"></div>
+                    <!-- <button type="button" class="button" data-toggle="modal" data-target="#myModal"> -->
+                    <button type="button" class="button" id="buttonCheck">
+                        CHECK
+                    </button>
+                </div>
+            <!-- </form> -->
+        	</div>
+	        <!-- Button to Open the Modal -->
+	        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	            Open modal
+	        </button> -->
+
+	        <!-- The Modal -->
+	        <div class="modal fade" id="myModal">
+	            <div class="modal-dialog modal-lg">
+	                <div class="modal-content">
+
+	                    <!-- Modal Header -->
+	                    <div class="modal-header">
+	                        <h4 class="modal-title">Twitter account info</h4>
+	                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	                    </div>
+
+	                    <!-- Modal body -->
+	                    <div class="modal-body">
+
+	                        <div class="row">
+	                            <div class="info col-lg-6">
+	                                <div class="profileHeader">
+	                                    <div class="banner">
+
+	                                    </div>
+
+
+	                                    <div class="profileInfo">
+	                                        <div class="table-responsive">
+	                                            <table class="table table-sm">
+	                                                <tbody>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Screen name</td>
+	                                                        <td class="screen_name"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Display name</td>
+	                                                        <td class="name"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Description</td>
+	                                                        <td class="description"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Location</td>
+	                                                        <td class="location"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">URL</td>
+	                                                        <td class="url"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Date joined</td>
+	                                                        <td class="created_at"></td>
+	                                                    </tr>
+	                                                   <!--  <tr>
+	                                                        <td class="text-right font-weight-bold">Follower Count</td>
+	                                                        <td class="followers_count"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Friend Count</td>
+	                                                        <td class="friends_count"></td>
+	                                                    </tr> -->
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Profile language</td>
+	                                                        <td class="lang"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Time zone</td>
+	                                                        <td class="time_zone"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Total Tweets</td>
+	                                                        <td class="ttl_tweet"></td>
+	                                                    </tr>
+	                                                    <tr>
+	                                                        <td class="text-right font-weight-bold">Average Tweet Length</td>
+	                                                        <td class="avg_tweet_len"></td>
+	                                                    </tr>
+
+	                                                </tbody>
+	                                            </table>
+	                                        </div>
+
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="data-vis col-lg-6">
+	                                <div class="row">
+	                                    <div class="bot col-6">
+	                                        <h5 class="bot-title">Bot: <span class="is-bot"></span></h5>
+
+	                                    </div>
+	                                    <div class="political-propaganda col-6">
+	                                        <h5>Russian propaganda</h5>
+	                                        <div class="political-propaganda-inner">
+
+	                                        </div>
+	                                    </div>
+	                                    <div class="profile-features col-6">
+	                                        <h5>Profile/Behavior features</h5>
+	                                        <table class="table table-sm table-features">
+	                                            <tbody>
+	                                                <tr>
+	                                                    <td class="">Friends</td>
+	                                                    <td class="friends text-right"></td>
+	                                                </tr>
+	                                                <tr>
+	                                                    <td class="">Followers</td>
+	                                                    <td class="followers text-right"></td>
+	                                                </tr>
+	                                                <tr>
+	                                                    <td class="">Verified</td>
+	                                                    <td class="verified text-right"></td>
+	                                                </tr>
+	                                                <tr>
+	                                                    <td class="">Default Profile</td>
+	                                                    <td class="default-profile text-right"></td>
+	                                                </tr>
+
+	                                            </tbody>
+	                                        </table>
+
+
+	                                    </div>
+	                                    <div class="common-topics-from-tweets col-6">
+	                                        <h5>Common wordings</h5>
+
+	                                    </div>
+	                                    <div class="recent-tweets tweets col-12">
+	                                        <h5>Recent tweets</h5>                                       	
+	                                    </div>
+                                	</div>
+
+                            	</div>
+	                        </div>
+
+
+
+	                    </div>
+
+	                    <!-- Modal footer -->
+	                    <div class="modal-footer">
+	                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	                    </div>
+
+	                </div>
+	            </div>
+	        </div>
+
+		</div>
+			
+		<!-- </section> -->
+		<!-- //Homepage -->
+		
+		<!-- Menu bar -->
+		<header id="menu_bar" class="menu_bar">
+			<div class="container">
+				<nav class="menu_bar_navigation">
+	  				<ul>
+	  					<li class="visible-lg visible-md"><a href="#more_info" class="go_to_overview" >Check</a></li>
+	  					<li class="visible-lg visible-md"><a href="#team" >Team</a></li>
+	  					<li class="visible-lg visible-md"><a href="#contact" >Contact</a></li>
+	  					<li class="hidden-lg hidden-md"><div class="mobile_nav_open_button "><a href="" id="showRight"><div data-icon="&#xe2f3;" class="button_icon close_icon"></div></a></div></li>
+	  				</ul>
+	  			</nav>
+			</div>
+		</header>
+		<!-- // Menu bar -->
+
+		<!-- Team #################### -->
+		<section id="team" class="subsection background_color2 menu_bar-waypoint" data-animate-down="menu_bar-show" data-animate-up="menu_bar-hide">
+			<div class="container">
+			
+			    <!-- INTRO -->
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center team_anim1">
+						<div class="intro">
+							<h3>Team behind the Bot Dectection</h3>
+							<h5>Our team is inspired to develop a product that detects political propaganda bots on Twitter and protects American democracy against outsiders' influence</h5>
+						</div>
+					</div>
+				</div>
+				<!-- //INTRO -->
+				
+				<div class="row">
+					<!-- Team member -->
+					<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 align-center team_anim2">
+						<img src="images/team/stacia_profile.jpg" class="img_responsive" alt="" width="275">
+						<div class="team_member_info">
+							<h4>Stacia Choe</h4>							
+						</div>
+						
+						<!-- Social Icons -->
+						<div class="social_icons_container align-center">
+						  	<div class="social_icons">
+				                <ul>
+				                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+				                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li></li>
+				                </ul>
+						    </div>
+					    </div>	
+						<!-- //Social Icons -->
+					</div>
+					<!-- //Team member -->
+					
+					<!-- Team member -->
+					<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 align-center team_anim3">
+						<img src="images/team/phat_profile.jpg" class="img_responsive" alt="" width="275">
+						<div class="team_member_info">
+							<h4>Phat Doan</h4>
+						</div>
+						
+						<!-- Social Icons -->
+						<div class="social_icons_container align-center">
+						  	<div class="social_icons">
+				                <ul>
+				                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='https://twitter.com/heou87'"></div></li>
+				                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='https://www.linkedin.com/in/phattdoan'"></div></li>
+				                	</li>
+				                </ul>
+						    </div>
+					    </div>	
+						<!-- //Social Icons -->
+					</div>
+					<!-- //Team member -->
+					
+					<!-- Team member -->
+					<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 align-center team_anim4">
+						<img src="images/team/kasey_profile.jpg" class="img_responsive" alt="" width="275">
+						<div class="team_member_info">
+							<h4>Kasey Ng</h4>
+						</div>
+						
+						<!-- Social Icons -->
+						<div class="social_icons_container align-center">
+						  	<div class="social_icons">
+				                <ul>
+				                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+				                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
+				                </ul>
+						    </div>
+					    </div>	
+						<!-- //Social Icons -->
+					</div>
+					<!-- //Team member -->
+					
+					<!-- Team member -->
+					<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 align-center team_anim5">
+						<img src="images/team/vyas_profile.jpg" class="img_responsive" alt="" width="275">
+						<div class="team_member_info">
+							<h4>Vyas Swaminathan</h4>
+						</div>
+						
+						<!-- Social Icons -->
+						<div class="social_icons_container align-center">
+						  	<div class="social_icons">
+				                <ul>
+				                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+				                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>				                    
+				                </ul>
+						    </div>
+					    </div>	
+						<!-- //Social Icons -->
+					</div>
+					<!-- //Team member -->
+					
+				</div>
+			</div>		
+		</section>
+		<!-- //Team -->
+		
+
+		<!-- Contact #################### -->
+		<section id="contact" class="subsection background_color1">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 contact_form_container contact_anim1" >
+						<h3>Contact Us</h3>
+
+						<!-- Contact Form -->
+						<form action="php/contactform.php" id="contact-form" method="post">
+							<div class="contact_form">
+								<div class="input-field">
+					  				<input id="first_name" type="email" name="contact-name">
+					  				<label for="first_name">Your Name</label>
+					  			</div>
+					  			<div class="input-field">
+					  				<input id="contact_email" type="email" name="contact-email">
+					  				<label for="contact_email">Email Address</label>
+					  			</div>
+					  			<div class="input-field">
+						  			<textarea class="materialize-textarea" name="contact-message"></textarea>
+						  			<label>Message</label>
+						  		</div>
+				  			</div>	
+				  			<button class="btn waves-effect waves-light" type="submit" name="action">Send</button>
+						</form>
+						<!-- //Contact Form -->
+
+						<div id="message"><div id="alert"></div></div><!-- Message container --> 
+					</div>
+				
+				
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 contact_anim2">
+					<h3>Contact Info</h3>
+					<!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, architecto beatae vitae dicta sunt explicabo.</p> -->					
+						<ul class="icon_list">
+							<li><div data-icon="&#xe1b4;" class="icon_small float-left"></div><h6>102 South Hall #4600, Berkeley, CA 94720,<br>United States</h6></li>
+							<li><div data-icon="&#xe242;" class="icon_small float-left"></div><h6><a href="mailto:phatdoan@berkeley.edu">{staciachoe,phatdoan,kaseyng,vyas}@berkeley.edu</a></h6></li>
+						</ul>					
+					</div>
+				</div>				
+			</div>
+		</section>
+		<!-- //Contact -->
+		
+		<!-- Footer #################### -->
+		<section id="footer" class="subsection background_color2 ">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center">
+					
+						<!-- Social Icons -->
+						<div class="social_icons_container align-center">
+						  	<div class="social_icons">
+				                <ul>
+				                    <li><div data-icon="&#xe282;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+				                    <li><div data-icon="&#xe279;" class="social_icon linkdin_icon" onclick="location.href='#'"></div></li>
+				                </ul>
+						    </div>
+					    </div>	
+						<!-- //Social Icons -->
+
+					<p>Copyright 2018 © BOT_DETECTION, Made with ❤ by Stacia, Phat, Kasey, Vyas</p>	
+					</div>
+				</div>				
+			</div>
+		</section>
+		<!-- //Footer -->
+		
+		
+		
+	</div>
+	<!-- //preloader -->
+	
+   
+	<!-- JavaScript plugins comes here -->	
+    <script src="js/jquery-2.1.3.min.js"></script>        <!-- jQuery -->
+    <script src="js/jquery.easing.min.js"></script>       <!-- jQuery easing -->    
+    <script src="js/jquery.scrollTo.js"></script>         <!-- Scroll to -->
+    <script src="js/jquery.cycle.all.min.js"></script>    <!-- jQuery cycle -->
+    <script src="js/jquery.form.js"></script>    		  <!-- jQuery form -->
+    <script src="js/jquery.maximage.min.js"></script>     <!-- MaxImage background image slideshow -->
+    <script src="js/classie.js"></script>                 <!-- Class helper function -->
+	<script src="js/pathLoader.js"></script>              <!-- Preloader Loading Animation -->
+	<script src="js/preloader.js"></script>               <!-- Preloader -->
+    <script src="js/retina.js"></script>                  <!-- Retina.js - support for HiDPI Displays -->
+    <script src="js/waypoints.min.js"></script>           <!-- Waypoints -->
+    <script src="js/materialize.js"></script>     		  <!-- Materialize -->
+    <script src="js/nivo-lightbox.min.js"></script>       <!-- Lightbox/Modalbox -->
+    <script src="js/jquery.fitvids.js"></script>      	  <!-- Responsive Video -->
+    <script src="js/owl.carousel.js"></script>      	  <!-- Owl Carousel --> 
+    <script src="js/main.js"></script>                    <!-- Main Js file -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>   
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/d3.v4.min.js"></script>
+    <script src="js/script.js"></script>   
+
+    
+    <!-- Show message after newsletter form submit -->
+	<script type="text/javascript">
+        $('document').ready(function()
+            {
+            $('#subscribe-form').ajaxForm( {
+                target: '#preview',
+                success: function() {       
+                      $('#preview').addClass( "show_message" );
+                    }
+                });
+            });
+    </script>
+
+   
+    <!-- Nav Bar show/hide after scrolling -->
+	<script>
+	var $head = $( '#menu_bar' );
+	$( '.menu_bar-waypoint' ).each( function(i) {
+		var $el = $( this ),
+			animClassDown = $el.data( 'animateDown' ),
+			animClassUp = $el.data( 'animateUp' );
+			
+
+		$el.waypoint( function( direction ) {
+			if( direction === 'down' && animClassDown ) {
+				$head.attr('class', 'menu_bar ' + animClassDown);
+			}
+			else if( direction === 'up' && animClassUp ){
+				$head.attr('class', 'menu_bar ' + animClassUp);
+			}
+		}, { offset: function() {
+			navbarheight = $("#menu_bar").outerHeight()+1;
+			return navbarheight;
+			}
+		 } );
+	} );
+	</script>
+	
+
+
+    
+  </body>
+</html>

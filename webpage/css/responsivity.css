@@ -1,0 +1,95 @@
+/*------------------------------------------------------------------
+[Stylesheet]
+Responsiveness Fixes
+-------------------------------------------------------------------*/
+
+@media (max-width: 337px){
+	.navigation_desktop ul {
+    	margin-top:-2rem;
+	}
+}
+
+
+@media (max-width: 479px) {
+
+	#main_content {
+		text-align:center!important;
+		margin-right:15px;
+	}
+	
+	.input-field .prefix {
+		display:none;
+	}
+	
+	.input-field .prefix ~ input {
+		margin-left:0;
+		width:100%;
+	}
+	
+	.input-field .prefix ~ label {
+    	margin-left: 0;
+    }
+	
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#message h4{
+    	font-size: 1.2rem;
+    	line-height: 2.06rem;
+	}
+	
+	#message {
+		width:100%;
+		margin: 0;
+		max-height:100%;
+		margin-left:-50%;
+		margin-top:-50%;
+	}
+	
+	.navigation_desktop ul li, .menu_bar_navigation ul li { float:right; }
+	.feature_box_center_content_row {padding-top:2rem;}	
+	.feature_box, .feature_box_center { padding-top:0rem;}
+	.feature_box .feature_content { padding-top:2rem; padding-bottom:0;}
+	.feature_image { margin-top:3rem; padding-bottom:3rem;}
+	
+}
+	
+@media (min-width: 480px) and (max-width: 767px) {
+		
+	#main_content { 
+		text-align:center!important;		
+	}
+	
+	.social_icons_container {
+    	text-align:center!important
+	}
+
+	#message h4{
+    	font-size: 1.2rem;
+    	line-height: 2.06rem;
+	}
+	
+	#message {
+		width:100%;
+		margin: 0;
+		max-height:100%;
+		margin-left:-50%;
+		margin-top:-50%;
+	}
+	
+	.navigation_desktop ul li, .menu_bar_navigation ul li { float:right; }	
+	.feature_box_center_content_row {padding-top:2rem;}
+	.feature_box, .feature_box_center { padding-top:0rem;}
+	.feature_box .feature_content { padding-top:2rem; padding-bottom:0;}
+	.feature_image { margin-top:2rem; padding-bottom:3rem;}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.navigation_desktop ul li, .menu_bar_navigation ul li { float:right; }
+	.feature_box_center_content_row {padding-top:2rem;}
+	.feature_box, .feature_box_center { padding-top:0rem;}
+	.feature_box .feature_content { padding-top:2rem; padding-bottom:0;}
+	.feature_image { margin-top:2rem; padding-bottom:3rem;}
+}
